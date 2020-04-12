@@ -6,18 +6,15 @@
 
     <body>
         <?php
-            $i1 = "false";
-            $i2 = "true";
-
-            $and1 = ($i1 AND $i1);
-            $and2 = ($i1 AND $i2);
-            $and3 = ($i2 AND $i1);
-            $and4 = ($i2 AND $i2);
+            $and1 = (false && false);
+            $and2 = (false && true);
+            $and3 = (true && false);
+            $and4 = (true && true);
             
-            $or1 = ($i1 OR $i1);
-            $or2 = ($i1 OR $i2);
-            $or3 = ($i2 OR $i1);
-            $or4 = ($i2 OR $i2);
+            $or1 = (false || false);
+            $or2 = (false || true);
+            $or3 = (true || false);
+            $or4 = (true || true);
 
         ?>
         <p>Tabel Logika 1111</p>
@@ -31,26 +28,26 @@
             <tr>
                 <td>False</td>
                 <td>False</td>
-                <td><?php echo "$and1"; ?></td>
-                <td><?php echo "$or1"; ?></td> 
+                <td><?php echo (float) $and1; ?></td>
+                <td><?php echo (float) $or1; ?></td> 
             </tr>
             <tr>
                 <td>False</td>
                 <td>True</td>
-                <td><?php echo "$and2"; ?></td>
-                <td><?php echo "$or2"; ?></td> 
+                <td><?php echo (float) $and2; ?></td>
+                <td><?php echo $or2; ?></td> 
             </tr>
             <tr>
                 <td>True</td>
                 <td>False</td>
-                <td><?php echo "$and3"; ?></td>
-                <td><?php echo "$or3"; ?></td> 
+                <td><?php echo (float) $and3; ?></td>
+                <td><?php echo $or3; ?></td> 
             </tr>
             <tr>
                 <td>True</td>
                 <td>True</td>
-                <td><?php echo "$and4"; ?></td>
-                <td><?php echo "$or4"; ?></td> 
+                <td><?php echo $and4; ?></td>
+                <td><?php echo $or4; ?></td> 
             </tr>
         </table>
     </body>
